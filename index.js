@@ -1,7 +1,5 @@
 const util = require('util')
 
-const requestPromiseErrors = require('request-promise-core/errors')
-
 const keys = Object.keys
 const defineProperties = Object.defineProperties
 const defineProperty = Object.defineProperty
@@ -83,8 +81,21 @@ function register(Class) {
   Class.prototype.toJSON = errorInspection
 }
 
-register(requestPromiseErrors.RequestError)
-register(requestPromiseErrors.StatusCodeError)
-register(requestPromiseErrors.TransformError)
+function tryRequire(libName) {
+  try {
+    return require(libName)
+  } catch (_error) {}
+  return undefined
+}
 
-module.exports = requestPromiseErrors
+function initLib(lib) {
+  if (lib) {
+    register(lib.RequestError)
+    register(lib.StatusCodeError)
+    register(lib.TransformError)
+  }
+}
+
+initLib(tryRequire('request-promise-core/errors'))
+initLib(tryRequire('request-promise/errors'))
+initLib(tryRequire('request-promise-native/errors'))

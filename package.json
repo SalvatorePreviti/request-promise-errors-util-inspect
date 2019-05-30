@@ -1,6 +1,6 @@
 {
   "name": "request-promise-errors-util-inspect",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Patches request-promise-core errors to not include sensitive information during logging in node",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,6 @@
     "url": "https://github.com/SalvatorePreviti/request-promise-errors-util-inspect/issues"
   },
   "homepage": "https://github.com/SalvatorePreviti/request-promise-errors-util-inspect#readme",
-  "peerDependencies": {
-    "request-promise-core": ">=0"
-  },
   "devDependencies": {
     "@types/node": "^12.0.3",
     "chai": "^4.2.0",

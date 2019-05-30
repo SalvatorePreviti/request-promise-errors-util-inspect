@@ -1,6 +1,8 @@
-const errors = require('..')
 const util = require('util')
 const { expect } = require('chai')
+
+const errors = require('request-promise-core/errors')
+require('..')
 
 describe('request-promise-errors-util-inspect', () => {
   it('patches RequestError', () => {

@@ -1,5 +1,9 @@
 {
-  "extends": [
-    "eslint-config-quick"
-  ]
+  "extends": ["eslint-config-quick"],
+  "rules": {
+    "import/no-extraneous-dependencies": 0,
+    "node/no-extraneous-require": 0,
+    "global-require": 0,
+    "node/no-unpublished-require": 0
+  }
 }
