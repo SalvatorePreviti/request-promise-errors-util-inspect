@@ -1,0 +1,41 @@
+{
+  "name": "request-promise-errors-util-inspect",
+  "version": "1.0.0",
+  "description": "Patches request-promise-core errors to not include sensitive information during logging in node",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalvatorePreviti/request-promise-errors-util-inspect.git"
+  },
+  "keywords": [
+    "request-promise",
+    "util.inspect.custom",
+    "errors"
+  ],
+  "author": "Salvatore Previti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SalvatorePreviti/request-promise-errors-util-inspect/issues"
+  },
+  "homepage": "https://github.com/SalvatorePreviti/request-promise-errors-util-inspect#readme",
+  "peerDependencies": {
+    "request-promise-core": ">=0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-quick": "^0.1.23",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "mocha": "^6.1.4",
+    "prettier": "^1.17.1",
+    "request-promise": "^4.2.4"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}
